@@ -1,13 +1,22 @@
-import React from 'react';
+/*
+ * @Author: 牛皓
+ * @Date: 2020-11-04 15:44:17
+ * @LastEditors: 牛皓
+ * @LastEditTime: 2020-11-19 09:53:55
+ * @FilePath: \wx-music\src\index.js
+ */
+import React,{Suspense} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import "./assets/css/base.css"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <Suspense fallback={<div>loading.....</div>}>
     <App />
-  </React.StrictMode>,
+  </Suspense>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
